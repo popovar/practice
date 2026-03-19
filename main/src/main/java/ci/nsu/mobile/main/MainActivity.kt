@@ -85,13 +85,15 @@ fun Main() {
         Spacer(modifier = Modifier.height(8.dp))
         Button(
             onClick = {
-                if (text.lowercase() in collormaps) {
+                val color =  collormaps[text.lowercase()]
+                if (color != null ) {
+                    buttoncolor = color
                     Log.i("color","Цвет $text применен")
                 } else {
+                    buttoncolor = c.Gray
                     Log.e("color","Цвет не найден")
                 }
-                buttoncolor=(if (text.lowercase() in collormaps) collormaps[text.lowercase()]
-                else c.Gray)!! },
+                      },
             colors = ButtonDefaults.buttonColors(containerColor = buttoncolor),
             modifier = Modifier
                 .height(height = 48.dp)
