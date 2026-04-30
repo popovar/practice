@@ -28,15 +28,15 @@ fun TemperatureConverterScreen(
 
     Column(
         modifier = Modifier
-            .fillMaxSize()//занять весь экран
-            .padding(32.dp),//оступы от краев
-        horizontalAlignment = Alignment.CenterHorizontally,//выровнить по центру по горизантале
-        verticalArrangement = Arrangement.Center//выровнить по центру по вертивале
+            .fillMaxSize()
+            .padding(32.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "🌡️ Конвертер температуры",//показывает текст
-            style = MaterialTheme.typography.headlineMedium,//использует стиль загаловка
-            modifier = Modifier.padding(bottom = 32.dp)//отступ
+            text = "🌡️ Конвертер температуры",
+            style = MaterialTheme.typography.headlineMedium,
+            modifier = Modifier.padding(bottom = 32.dp)
         )
 
         // Поле для Цельсия
@@ -55,7 +55,7 @@ fun TemperatureConverterScreen(
             singleLine = true
         )
 
-        Spacer(modifier = Modifier.height(16.dp))//создает пространство высотой 16 точек(что бы элементы не прилипали к друг другу)
+        Spacer(modifier = Modifier.height(16.dp))
 
         Text(
             text = "⬇️  Равно  ⬇️",
