@@ -51,4 +51,9 @@ class TemperatureViewModel : ViewModel() {
             )
         }
     }
+    fun clearFields() {
+        _uiState.update {
+            TemperatureUiState() // Очищаем оба поля
+        }
+    }
 }

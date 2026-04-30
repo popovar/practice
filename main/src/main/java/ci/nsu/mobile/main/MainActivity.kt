@@ -81,6 +81,17 @@ fun TemperatureConverterScreen(
         )
 
         Spacer(modifier = Modifier.height(24.dp))
+        Button(
+            onClick = { viewModel.clearFields() },
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = MaterialTheme.colorScheme.error
+            )
+        ) {
+            Text("🗑️ Очистить всё")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
 
         // Карточка с формулами
         Card(
